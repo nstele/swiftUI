@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LandmarkList: View {
+  static let TITLE = "Landmarks"
   var body: some View {
     NavigationView {
       List(landmarks) { landmark in
@@ -16,7 +17,7 @@ struct LandmarkList: View {
         }
       }
     }
-    .navigationTitle("Landmarks")
+    .navigationTitle(LandmarkList.TITLE)
   }
 }
 

@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct CircleImage: View {
-
+  static let LINE_WIDTH: CGFloat = 4
+  static let RADIUS: CGFloat = 7
   var image: Image
 
   var body: some View {
     image
       .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-      .overlay(Circle().stroke(Color.white, lineWidth: 4))
-      .shadow(radius: 7)
+      .overlay(Circle().stroke(Color.white, lineWidth: CircleImage.LINE_WIDTH))
+      .shadow(radius: CircleImage.RADIUS)
   }
 }
 

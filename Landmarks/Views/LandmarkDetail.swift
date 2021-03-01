@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
-
+  static let IMAGE_OFFSET: CGFloat = -130
+  static let IMAGE_PADDING: CGFloat = -130
   var landmark: Landmark
 
   var body: some View {
@@ -17,8 +18,8 @@ struct LandmarkDetail: View {
         .frame(height: 300)
         .ignoresSafeArea(edges: .top)
       CircleImage(image: landmark.image)
-        .offset(y: -130)
-        .padding(.bottom, -130)
+        .offset(y: LandmarkDetail.IMAGE_OFFSET)
+        .padding(.bottom, LandmarkDetail.IMAGE_PADDING)
       VStack(alignment: .leading) {
         Text(landmark.name)
           .font(.title)

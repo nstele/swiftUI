@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct LandmarkRow: View {
+  static let ROW_SIZE: CGFloat = 50
   var landmark: Landmark
+
   var body: some View {
     HStack(alignment: .center, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
       landmark.image
-        .resizable().frame(width: 50, height: 50)
+        .resizable().frame(width: LandmarkRow.ROW_SIZE, height: LandmarkRow.ROW_SIZE)
       Text(landmark.name)
       Spacer()
     })
