@@ -17,13 +17,19 @@ struct LandmarkRow: View {
         .resizable().frame(width: LandmarkRow.ROW_SIZE, height: LandmarkRow.ROW_SIZE)
       Text(landmark.name)
       Spacer()
+
+      if (landmark.isFavorite) {
+        Image(systemName: "star.fill")
+          .foregroundColor(.yellow)
+          .padding(20)
+      }
     })
   }
 }
 
 struct LandmarkRow_Previews: PreviewProvider {
+  static var landmarks = ModelData().landmarks
   static var previews: some View {
-
     Group {
       LandmarkRow(landmark: landmarks[0])
       LandmarkRow(landmark: landmarks[1])
