@@ -1,5 +1,5 @@
-# swiftUI
-Swift UI tutorials
+# SwiftUI
+Swift UI Apple tutorials
 
 # Purpose
 Learn and practice how to use Swift UI
